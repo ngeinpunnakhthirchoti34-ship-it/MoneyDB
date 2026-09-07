@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <radialGradient id="pvcGoldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff2c2" />
+      <stop offset="50%" stop-color="#f5a623" />
+      <stop offset="90%" stop-color="#cf7a0c" />
+      <stop offset="100%" stop-color="#8a4704" />
+    </radialGradient>
+    <linearGradient id="pvcGoldLinear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf3d0" />
+      <stop offset="25%" stop-color="#f8b63e" />
+      <stop offset="70%" stop-color="#d47911" />
+      <stop offset="100%" stop-color="#823c00" />
+    </linearGradient>
+    <linearGradient id="pvcBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e2380" />
+      <stop offset="100%" stop-color="#1836ad" />
+    </linearGradient>
+    <linearGradient id="pvcFlowerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#da4485" />
+      <stop offset="50%" stop-color="#9a267b" />
+      <stop offset="100%" stop-color="#ffb74d" />
+    </linearGradient>
+
+    <!-- Text Paths -->
+    <!-- Top Arc for Thai text: radius ~195, center 250,250, from left to right -->
+    <path id="topTextArc" d="M 65 250 A 185 185 0 0 1 435 250" fill="none" />
+    <!-- Bottom Arc for English text: radius ~205, center 250,250, from right to left or downwards -->
+    <path id="bottomTextArc" d="M 68 250 A 182 182 0 0 0 432 250" fill="none" />
+  </defs>
+
+  <!-- Outer Double Circle Border -->
+  <circle cx="250" cy="250" r="242" fill="#ffffff" stroke="#122a96" stroke-width="5" />
+  <circle cx="250" cy="250" r="236" fill="none" stroke="#122a96" stroke-width="2" />
+
+  <!-- Outer Ring Band Background -->
+  <!-- Top Half Blue Background -->
+  <path d="M 250 25 A 225 225 0 0 1 475 250 L 400 250 A 150 150 0 0 0 250 100 A 150 150 0 0 0 100 250 L 25 250 A 225 225 0 0 1 250 25 Z" fill="#122a96" />
+  <!-- Bottom Half White Background with subtle ring -->
+  <path d="M 475 250 A 225 225 0 0 1 250 475 A 225 225 0 0 1 25 250 L 100 250 A 150 150 0 0 0 250 400 A 150 150 0 0 0 400 250 Z" fill="#ffffff" />
+
+  <!-- Dividing Ring Border -->
+  <circle cx="250" cy="250" r="152" fill="none" stroke="#122a96" stroke-width="4" />
+
+  <!-- Top Text: วิทยาลัยอาชีวศึกษาแพร่ (Curved along top arc) -->
+  <text font-family="'Prompt', 'Sarabun', 'Segoe UI', Tahoma, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" letter-spacing="2">
+    <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">
+      วิทยาลัยอาชีวศึกษาแพร่
+    </textPath>
+  </text>
+
+  <!-- Bottom Text: PHRAE VOCATIONAL COLLEGE (Curved along bottom arc) -->
+  <text font-family="'Prompt', 'Plus Jakarta Sans', Arial, sans-serif" font-size="22" font-weight="bold" fill="#122a96" letter-spacing="3.5">
+    <textPath href="#bottomTextArc" startOffset="50%" text-anchor="middle">
+      PHRAE VOCATIONAL COLLEGE
+    </textPath>
+  </text>
+
+  <!-- Left Ornamental Flower -->
+  <g transform="translate(60, 250) scale(0.65)">
+    <!-- 4 Petals -->
+    <path d="M 0 -25 C 10 -10, 10 10, 0 25 C -10 10, -10 -10, 0 -25 Z" fill="url(#pvcFlowerGrad)" />
+    <path d="M -25 0 C -10 10, 10 10, 25 0 C 10 -10, -10 -10, -25 0 Z" fill="url(#pvcFlowerGrad)" />
+    <circle cx="0" cy="0" r="7" fill="#ffca28" stroke="#122a96" stroke-width="1.5" />
+  </g>
+
+  <!-- Right Ornamental Flower -->
+  <g transform="translate(440, 250) scale(0.65)">
+    <!-- 4 Petals -->
+    <path d="M 0 -25 C 10 -10, 10 10, 0 25 C -10 10, -10 -10, 0 -25 Z" fill="url(#pvcFlowerGrad)" />
+    <path d="M -25 0 C -10 10, 10 10, 25 0 C 10 -10, -10 -10, -25 0 Z" fill="url(#pvcFlowerGrad)" />
+    <circle cx="0" cy="0" r="7" fill="#ffca28" stroke="#122a96" stroke-width="1.5" />
+  </g>
+
+  <!-- Inner Center Field (Dark Royal Blue) -->
+  <circle cx="250" cy="250" r="146" fill="url(#pvcBlueGradient)" stroke="#ffffff" stroke-width="3" />
+
+  <!-- Sacred Pali / Thai Letters: ส นิ ทุ ม in White Bold Serif Font -->
+  <!-- Top-Left: ส -->
+  <text x="175" y="172" font-family="'Prompt', 'Sarabun', serif" font-size="34" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.4))">ส</text>
+  <!-- Top-Right: นิ -->
+  <text x="325" y="172" font-family="'Prompt', 'Sarabun', serif" font-size="34" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.4))">นิ</text>
+  <!-- Bottom-Left: ทุ -->
+  <text x="175" y="315" font-family="'Prompt', 'Sarabun', serif" font-size="34" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.4))">ทุ</text>
+  <!-- Bottom-Right: ม -->
+  <text x="325" y="315" font-family="'Prompt', 'Sarabun', serif" font-size="34" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.4))">ม</text>
+
+  <!-- Center Golden Emblem: Thai Buddhist Altar & Dharmachakra (ซุ้มเรือนแก้ว & ธรรมจักร) -->
+  <g id="center-altar-emblem" transform="translate(250, 246)">
+    <!-- Outer Glow -->
+    <ellipse cx="0" cy="-10" rx="64" ry="85" fill="#f39c12" opacity="0.25" filter="blur(8px)" />
+
+    <!-- Ornate Kanok Flame Arch (ซุ้มเรือนแก้ว) -->
+    <!-- Pinnacle (ยอดกนกเปลว) -->
+    <path d="M 0 -130 C -8 -110, -5 -90, 0 -75 C 5 -90, 8 -110, 0 -130 Z" fill="url(#pvcGoldLinear)" stroke="#522400" stroke-width="1.5" />
+    <path d="M 0 -115 C -15 -98, -12 -70, 0 -55 C 12 -70, 15 -98, 0 -115 Z" fill="url(#pvcGoldGlow)" stroke="#522400" stroke-width="1.2" />
+
+    <!-- Left Arch Body -->
+    <path d="M 0 -75 C -30 -60, -55 -25, -55 20 C -55 45, -45 58, -35 65 C -25 60, -25 45, -35 30 C -42 15, -38 -20, -15 -45 C -8 -55, 0 -65, 0 -75 Z" fill="url(#pvcGoldLinear)" stroke="#522400" stroke-width="1.5" />
+    <!-- Left Flames -->
+    <path d="M -48 -10 C -68 -25, -60 -45, -52 -55 C -55 -40, -42 -25, -38 -15 Z" fill="url(#pvcGoldGlow)" stroke="#522400" stroke-width="1" />
+    <path d="M -54 18 C -72 10, -68 -8, -58 -18 C -60 -5, -50 8, -46 16 Z" fill="url(#pvcGoldGlow)" stroke="#522400" stroke-width="1" />
+
+    <!-- Right Arch Body -->
+    <path d="M 0 -75 C 30 -60, 55 -25, 55 20 C 55 45, 45 58, 35 65 C 25 60, 25 45, 35 30 C 42 15, 38 -20, 15 -45 C 8 -55, 0 -65, 0 -75 Z" fill="url(#pvcGoldLinear)" stroke="#522400" stroke-width="1.5" />
+    <!-- Right Flames -->
+    <path d="M 48 -10 C 68 -25, 60 -45, 52 -55 C 55 -40, 42 -25, 38 -15 Z" fill="url(#pvcGoldGlow)" stroke="#522400" stroke-width="1" />
+    <path d="M 54 18 C 72 10, 68 -8, 58 -18 C 60 -5, 50 8, 46 16 Z" fill="url(#pvcGoldGlow)" stroke="#522400" stroke-width="1" />
+
+    <!-- Center Dharmachakra (กงล้อธรรมจักร 12 ก้าน) -->
+    <g transform="translate(0, 0)">
+      <!-- Outer Rim of Wheel -->
+      <circle cx="0" cy="0" r="30" fill="#fdf0cd" stroke="#7a3600" stroke-width="3" />
+      <circle cx="0" cy="0" r="25" fill="#cf7a0c" stroke="#522400" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="21" fill="#fcedbb" stroke="#823c00" stroke-width="1.2" />
+
+      <!-- 12 Spokes of Dharmachakra -->
+      <g stroke="#823c00" stroke-width="2.5" stroke-linecap="round">
+        <line x1="0" y1="-21" x2="0" y2="21" />
+        <line x1="-21" y1="0" x2="21" y2="0" />
+        <line x1="-14.8" y1="-14.8" x2="14.8" y2="14.8" />
+        <line x1="-14.8" y1="14.8" x2="14.8" y2="-14.8" />
+        <line x1="-19.3" y1="-8" x2="19.3" y2="8" />
+        <line x1="-8" y1="-19.3" x2="8" y2="19.3" />
+        <line x1="-19.3" y1="8" x2="19.3" y2="-8" />
+        <line x1="-8" y1="19.3" x2="8" y2="-19.3" />
+      </g>
+
+      <!-- Center Hub -->
+      <circle cx="0" cy="0" r="8" fill="url(#pvcGoldGlow)" stroke="#522400" stroke-width="1.8" />
+      <circle cx="0" cy="0" r="3.5" fill="#fdf3d0" />
+    </g>
+
+    <!-- Multi-tiered Altar Pedestal (ฐานบัว / ฐานสิงห์) -->
+    <!-- Tier 1 (Top lotus cushion under wheel) -->
+    <path d="M -30 46 C -20 42, 20 42, 30 46 L 25 54 L -25 54 Z" fill="url(#pvcGoldLinear)" stroke="#522400" stroke-width="1.5" />
+    <line x1="-22" y1="50" x2="22" y2="50" stroke="#fdf0cd" stroke-width="1.5" />
+
+    <!-- Tier 2 (Middle waisted pedestal with decorative brackets) -->
+    <path d="M -38 54 C -35 60, -25 64, -22 66 L 22 66 C 25 64, 35 60, 38 54 L -38 54 Z" fill="#cf7a0c" stroke="#522400" stroke-width="1.5" />
+    <!-- Pedestal Center Carving -->
+    <rect x="-18" y="56" width="36" height="8" rx="2" fill="url(#pvcGoldLinear)" stroke="#522400" stroke-width="1" />
+
+    <!-- Tier 3 (Lion/Lotus Tier - ฐานสิงห์บัวหงาย) -->
+    <path d="M -44 66 C -40 73, -48 80, -50 84 L 50 84 C 48 80, 40 73, 44 66 Z" fill="url(#pvcGoldLinear)" stroke="#522400" stroke-width="1.5" />
+    <!-- Petal notches -->
+    <circle cx="-35" cy="74" r="4" fill="#fcedbb" stroke="#522400" stroke-width="0.8" />
+    <circle cx="-18" cy="74" r="4" fill="#fcedbb" stroke="#522400" stroke-width="0.8" />
+    <circle cx="0" cy="74" r="4" fill="#fcedbb" stroke="#522400" stroke-width="0.8" />
+    <circle cx="18" cy="74" r="4" fill="#fcedbb" stroke="#522400" stroke-width="0.8" />
+    <circle cx="35" cy="74" r="4" fill="#fcedbb" stroke="#522400" stroke-width="0.8" />
+
+    <!-- Base Plinth (ฐานล่างสุด) -->
+    <path d="M -54 84 L 54 84 L 50 92 L -50 92 Z" fill="#cf7a0c" stroke="#522400" stroke-width="1.5" />
+    <rect x="-56" y="92" width="112" height="6" rx="2" fill="url(#pvcGoldLinear)" stroke="#522400" stroke-width="1.5" />
+  </g>
+</svg>
