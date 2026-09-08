@@ -2,15 +2,18 @@ import React from 'react';
 import { Database, ShieldCheck, CheckCircle2, Cloud, AlertCircle, Info, Mail } from 'lucide-react';
 import { User } from 'firebase/auth';
 import { PROJECT_DISPLAY_NAME, CURRENT_PROJECT_ID } from '../lib/firebase';
+import { AppUser } from '../types';
 
 interface FirebaseStatusBannerProps {
-  user: User | null;
+  user: AppUser | User | null;
   transactionCount: number;
+  onSignIn?: () => void;
 }
 
 export const FirebaseStatusBanner: React.FC<FirebaseStatusBannerProps> = ({
   user,
   transactionCount,
+  onSignIn,
 }) => {
   return (
     <div className="bg-gradient-to-r from-emerald-900 via-stone-900 to-stone-900 text-white rounded-2xl p-4 sm:p-5 mb-6 shadow-sm border border-emerald-800/40 relative overflow-hidden">
@@ -40,9 +43,21 @@ export const FirebaseStatusBanner: React.FC<FirebaseStatusBannerProps> = ({
                 เข้าสู่ระบบด้วย Gmail: <strong className="text-white">{user.email}</strong> • ซิงก์ข้อมูลลง Firebase ({PROJECT_DISPLAY_NAME}) แล้ว {transactionCount} รายการ
               </span>
             ) : (
-              <span>
-                กำลังทำงานในโหมดจัดเก็บข้อมูลเฉพาะบุคคล เข้าสู่ระบบด้วย Gmail เพื่อซิงก์ข้อมูลไปยังคลาวด์โปรเจกต์ <strong>{PROJECT_DISPLAY_NAME}</strong> แบบเรียลไทม์
-              </span>
+              <div className="flex flex-wrap items-center gap-3 pt-0.5">
+                <span>
+                  กำลังทำงานในโหมดจัดเก็บข้อมูลเฉพาะบุคคล เข้าสู่ระบบด้วย Gmail เพื่อซิงก์ข้อมูลไปยังคลาวด์โปรเจกต์ <strong>{PROJECT_DISPLAY_NAME}</strong>
+                </span>
+                {onSignIn && (
+                  <button
+                    type="button"
+                    onClick={onSignIn}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-semibold rounded-lg text-xs transition-colors shadow-xs cursor-pointer"
+                  >
+                    <Mail className="w-3.5 h-3.5" />
+                    <span>เข้าสู่ระบบทันที</span>
+                  </button>
+                )}
+              </div>
             )}
           </p>
         </div>

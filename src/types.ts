@@ -19,6 +19,15 @@ export interface UserProfile {
   photoURL?: string | null;
 }
 
+export interface AppUser {
+  uid: string;
+  email: string;
+  displayName: string;
+  photoURL?: string | null;
+  role?: 'admin' | 'teacher' | 'student' | 'user';
+  provider?: 'google' | 'college' | 'custom';
+}
+
 export interface CategoryItem {
   id: string;
   name: string;

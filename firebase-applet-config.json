@@ -1,12 +1,12 @@
 {
-  "projectId": "leafy-mason-053bd",
-  "appId": "1:430273175713:web:8264c34269ca7780d650e0",
-  "apiKey": "AIzaSyDzXoYFDGt7tvCzvIohEKhnpKAB_9QZZlo",
-  "authDomain": "leafy-mason-053bd.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-moneydb-f7da3a6e-e1c9-44d3-ad41-8fd004e11104",
-  "storageBucket": "leafy-mason-053bd.firebasestorage.app",
-  "messagingSenderId": "430273175713",
+  "projectId": "moneydb-3704d",
+  "appId": "1:773259286581:web:47c8771121c890688b397c",
+  "apiKey": "AIzaSyBJYAiYqT5YzAPKNoGqCG8SLAeHDpn3qaU",
+  "authDomain": "moneydb-3704d.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "storageBucket": "moneydb-3704d.firebasestorage.app",
+  "messagingSenderId": "773259286581",
   "measurementId": "",
-  "oAuthClientId": "430273175713-0nn5i8o506kggokp8m39fbag3j5le81o.apps.googleusercontent.com",
+  "oAuthClientId": "",
   "recaptchaSiteKey": ""
 }
